@@ -11,7 +11,7 @@
 			"location": {
 				"type": "AzureDataLakeStoreLocation",
 				"fileName": {
-					"value": "export.txt",
+					"value": "@concat('export_',formatDateTime(utcnow(),'ss'),'.txt')",
 					"type": "Expression"
 				},
 				"folderPath": "SalesData"
