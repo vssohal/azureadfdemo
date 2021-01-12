@@ -39,7 +39,7 @@
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "customers"
+			"table": "sales"
 		}
 	},
 	"type": "Microsoft.DataFactory/factories/datasets"
