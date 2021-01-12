@@ -47,7 +47,6 @@
 							{
 								"source": {
 									"name": "lastname",
-									"type": "String",
 									"physicalType": "varchar"
 								},
 								"sink": {
@@ -59,7 +58,6 @@
 							{
 								"source": {
 									"name": "firstname",
-									"type": "String",
 									"physicalType": "varchar"
 								},
 								"sink": {
@@ -71,7 +69,6 @@
 							{
 								"source": {
 									"name": "birthday",
-									"type": "Date",
 									"physicalType": "date"
 								},
 								"sink": {
@@ -82,9 +79,7 @@
 							},
 							{
 								"source": {
-									"name": "Modifiedon",
-									"type": "DateTime",
-									"physicalType": "datetime"
+									"name": ""
 								},
 								"sink": {
 									"type": "DateTime",
