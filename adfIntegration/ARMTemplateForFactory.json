@@ -103,56 +103,6 @@
 							"validateDataConsistency": false,
 							"translator": {
 								"type": "TabularTranslator",
-								"mappings": [
-									{
-										"source": {
-											"name": "lastname",
-											"type": "String",
-											"physicalType": "varchar"
-										},
-										"sink": {
-											"type": "String",
-											"physicalType": "varchar",
-											"ordinal": 1
-										}
-									},
-									{
-										"source": {
-											"name": "firstname",
-											"type": "String",
-											"physicalType": "varchar"
-										},
-										"sink": {
-											"type": "String",
-											"physicalType": "varchar",
-											"ordinal": 2
-										}
-									},
-									{
-										"source": {
-											"name": "birthday",
-											"type": "Date",
-											"physicalType": "date"
-										},
-										"sink": {
-											"type": "Date",
-											"physicalType": "date",
-											"ordinal": 3
-										}
-									},
-									{
-										"source": {
-											"name": "Modifiedon",
-											"type": "DateTime",
-											"physicalType": "datetime"
-										},
-										"sink": {
-											"type": "DateTime",
-											"physicalType": "datetime",
-											"ordinal": 4
-										}
-									}
-								],
 								"typeConversion": true,
 								"typeConversionSettings": {
 									"allowDataTruncation": true,
@@ -556,7 +506,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "customers"
+					"table": "sales"
 				}
 			},
 			"dependsOn": [
