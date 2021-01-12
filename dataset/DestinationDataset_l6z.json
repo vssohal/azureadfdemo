@@ -1,0 +1,41 @@
+{
+	"name": "DestinationDataset_l6z",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Fname",
+				"type": "varchar"
+			},
+			{
+				"name": "Lname",
+				"type": "varchar"
+			},
+			{
+				"name": "Dob",
+				"type": "date"
+			},
+			{
+				"name": "LastModifiedon",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Contacts"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

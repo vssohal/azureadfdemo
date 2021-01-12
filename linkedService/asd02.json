@@ -1,0 +1,17 @@
+{
+	"name": "asd02",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=True;data source=desktop-0I0DR40\\sql2016;initial catalog=AdventureWorksDW2016",
+			"userName": "northamerica\\varising",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI5MmE3OTg2OS0yYTk2LTQwNTItODI3YS02YTk2ZTc5MDgyZTUiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "adfasd1IR",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

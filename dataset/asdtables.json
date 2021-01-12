@@ -1,0 +1,13 @@
+{
+	"name": "asdtables",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "asd02",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
