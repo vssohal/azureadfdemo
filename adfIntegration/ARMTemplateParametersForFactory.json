@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adfIntegration"
+		},
+		"AzureSqlDatabase1_connectionString": {
+			"value": ""
+		},
+		"AzureSynapseAnalytics1_connectionString": {
+			"value": ""
+		},
+		"Localsrv_connectionString": {
+			"value": ""
+		},
+		"asd02_connectionString": {
+			"value": ""
+		},
+		"asd02_password": {
+			"value": ""
+		},
+		"azureblobstorage_connectionString": {
+			"value": ""
+		},
+		"asd02_properties_typeProperties_userName": {
+			"value": "northamerica\\varising"
+		},
+		"AzureDataLakeStore1_properties_typeProperties_dataLakeStoreUri": {
+			"value": "https://datalakestgact.azuredatalakestore.net/webhdfs/v1"
+		},
+		"AzureDataLakeStore1_properties_typeProperties_tenant": {
+			"value": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+		},
+		"AzureDataLakeStore1_properties_typeProperties_subscriptionId": {
+			"value": "55416fe0-9826-49c3-b354-cb3710dba3e6"
+		},
+		"AzureDataLakeStore1_properties_typeProperties_resourceGroupName": {
+			"value": "RG-sqldw"
+		}
+	}
+}
