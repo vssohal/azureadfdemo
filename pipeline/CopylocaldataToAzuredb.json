@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy_l6z",
+				"name": "CopyLocaldatatoAzuredb",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
