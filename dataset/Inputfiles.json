@@ -5,6 +5,11 @@
 			"referenceName": "azstorage",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"inputfilename": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
