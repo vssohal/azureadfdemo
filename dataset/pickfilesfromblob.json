@@ -1,0 +1,25 @@
+{
+	"name": "pickfilesfromblob",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "azureblobstorage",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"inputfile": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
