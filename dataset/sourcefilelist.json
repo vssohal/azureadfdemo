@@ -1,0 +1,12 @@
+{
+	"name": "sourcefilelist",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "togetcsvfilename",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": []
+	}
+}
