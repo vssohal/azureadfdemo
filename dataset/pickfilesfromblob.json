@@ -19,7 +19,7 @@
 					"value": "@dataset().inputfile",
 					"type": "Expression"
 				},
-				"folderPath": "loans/input",
+				"folderPath": "loans/output",
 				"container": "sqldbauditlogs"
 			},
 			"columnDelimiter": ",",
