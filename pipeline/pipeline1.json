@@ -17,7 +17,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "SqlServerSource",
-						"sqlReaderQuery": "select * from inputfiles",
+						"sqlReaderQuery": "select * from inputfiles where infile like 'request%'",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
