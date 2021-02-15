@@ -14,7 +14,13 @@
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobStorageLocation"
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().inputfile",
+					"type": "Expression"
+				},
+				"folderPath": "loans/output",
+				"container": "sqldbauditlogs"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
