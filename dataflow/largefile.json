@@ -22,7 +22,7 @@
 				}
 			],
 			"transformations": [],
-			"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false,\n\tpurgeFiles: true,\n\tformat: 'delimited',\n\tcontainer: 'sqldbauditlogs',\n\tfolderPath: 'loans/input',\n\tfileName: 'Loan.csv',\n\tcolumnDelimiter: ',',\n\tescapeChar: '\\\\',\n\tqutoChar: '\\\"',\n\tcolumnNamesAsHeader: true) ~> largefile\nlargefile sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tformat: 'delimited',\n\tcontainer: 'sqldbauditlogs',\n\tfolderPath: 'loans/output',\n\tcolumnDelimiter: ',',\n\tescapeChar: '\\\\',\n\tqutoChar: '\\\"',\n\tcolumnNamesAsHeader: false,\n\tfilePattern:'Loan_[n]',\n\tpartitionBy('roundRobin', 3),\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> multismalfiles"
+			"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false,\n\tpurgeFiles: true,\n\tformat: 'delimited',\n\tcontainer: 'sqldbauditlogs',\n\tfolderPath: 'loans/input',\n\tfileName: 'Loan.csv',\n\tcolumnDelimiter: ',',\n\tescapeChar: '\\\\',\n\tqutoChar: '\\\"',\n\tcolumnNamesAsHeader: true) ~> largefile\nlargefile sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tformat: 'delimited',\n\tcontainer: 'sqldbauditlogs',\n\tfolderPath: 'loans/output',\n\tcolumnDelimiter: ',',\n\tescapeChar: '\\\\',\n\tqutoChar: '\\\"',\n\tcolumnNamesAsHeader: true,\n\tfilePattern:'Loan_[n]',\n\tpartitionBy('roundRobin', 3),\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> multismalfiles"
 		}
 	}
 }
