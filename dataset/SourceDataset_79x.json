@@ -1,0 +1,68 @@
+{
+	"name": "SourceDataset_79x",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "azureblobstorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "loans/input",
+				"container": "sqldbauditlogs"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Loan_ID",
+				"type": "String"
+			},
+			{
+				"name": "loan_status",
+				"type": "String"
+			},
+			{
+				"name": "Principal",
+				"type": "String"
+			},
+			{
+				"name": "terms",
+				"type": "String"
+			},
+			{
+				"name": "effective_date",
+				"type": "String"
+			},
+			{
+				"name": "due_date",
+				"type": "String"
+			},
+			{
+				"name": "paid_off_time",
+				"type": "String"
+			},
+			{
+				"name": "past_due_days",
+				"type": "String"
+			},
+			{
+				"name": "age",
+				"type": "String"
+			},
+			{
+				"name": "education",
+				"type": "String"
+			},
+			{
+				"name": "Gender",
+				"type": "String"
+			}
+		]
+	}
+}
