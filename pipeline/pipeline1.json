@@ -89,7 +89,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"inputfile": {
-											"value": "@item().filename",
+											"value": "@item().infile",
 											"type": "Expression"
 										}
 									}
@@ -101,7 +101,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"TableName": {
-											"value": "substring(@item.filename,1,indexof(@item().filename)-1)\n",
+											"value": "@item().outfile",
 											"type": "Expression"
 										},
 										"schemaname": "dbo"
