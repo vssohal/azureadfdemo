@@ -1,0 +1,32 @@
+{
+	"name": "appendfiles",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "azstorage",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"AppFile": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().AppFile",
+					"type": "Expression"
+				},
+				"folderPath": "loans/append",
+				"container": "sqldbauditlogs"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
