@@ -112,7 +112,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"AppFile": {
-											"value": "@item().name+'.csv'",
+											"value": "@concatconcat(item().name,'.csv')",
 											"type": "Expression"
 										}
 									}
