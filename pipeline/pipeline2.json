@@ -67,10 +67,12 @@
 									"type": "DelimitedTextSource",
 									"storeSettings": {
 										"type": "AzureBlobStorageReadSettings",
-										"fileListPath": {
+										"recursive": true,
+										"wildcardFolderPath": {
 											"value": "@item().value",
 											"type": "Expression"
 										},
+										"wildcardFileName": "*.csv",
 										"enablePartitionDiscovery": false
 									},
 									"formatSettings": {
