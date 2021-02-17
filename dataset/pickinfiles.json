@@ -1,0 +1,22 @@
+{
+	"name": "pickinfiles",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "azstorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "loans/output",
+				"container": "sqldbauditlogs"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
