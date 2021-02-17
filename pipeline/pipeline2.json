@@ -45,10 +45,9 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('getmergefiles').output.name",
+						"value": "@activity('getmergefiles').output.childitems",
 						"type": "Expression"
 					},
-					"isSequential": true,
 					"activities": [
 						{
 							"name": "Copy data1",
@@ -72,7 +71,7 @@
 											"value": "@item().name",
 											"type": "Expression"
 										},
-										"wildcardFileName": "*.csv",
+										"wildcardFileName": "*",
 										"enablePartitionDiscovery": false
 									},
 									"formatSettings": {
@@ -104,13 +103,7 @@
 							"inputs": [
 								{
 									"referenceName": "getfiles",
-									"type": "DatasetReference",
-									"parameters": {
-										"foldername": {
-											"value": "@item().name",
-											"type": "Expression"
-										}
-									}
+									"type": "DatasetReference"
 								}
 							],
 							"outputs": [
