@@ -69,7 +69,7 @@
 										"type": "AzureBlobStorageReadSettings",
 										"recursive": true,
 										"wildcardFolderPath": {
-											"value": "@item().value",
+											"value": "@item().name",
 											"type": "Expression"
 										},
 										"wildcardFileName": "*.csv",
