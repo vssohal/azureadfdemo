@@ -120,7 +120,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"outfilename": {
-											"value": "@item().name",
+											"value": "@concat(item().name,'.csv')",
 											"type": "Expression"
 										}
 									}
