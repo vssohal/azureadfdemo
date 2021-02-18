@@ -2,16 +2,16 @@
 	"name": "importfile",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureDataLakeStore1",
+			"referenceName": "AzureBlobStorage1",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "AzureDataLakeStoreLocation",
-				"fileName": "export.txt",
-				"folderPath": "SalesData"
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "loans/output",
+				"container": "sqldbauditlogs"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
