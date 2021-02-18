@@ -53,20 +53,13 @@
 				"inputs": [
 					{
 						"referenceName": "sourcelink",
-						"type": "DatasetReference",
-						"parameters": {
-							"foldername": "loans/input/Loan"
-						}
+						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
 						"referenceName": "sinklink",
-						"type": "DatasetReference",
-						"parameters": {
-							"filename": "Loan.csv",
-							"foldername": "loans/append"
-						}
+						"type": "DatasetReference"
 					}
 				]
 			}
