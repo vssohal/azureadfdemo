@@ -6,9 +6,6 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"foldername": {
-				"type": "string"
-			},
 			"filename": {
 				"type": "string"
 			}
@@ -23,7 +20,7 @@
 					"type": "Expression"
 				},
 				"folderPath": {
-					"value": "@dataset().foldername",
+					"value": "loans/append/",
 					"type": "Expression"
 				},
 				"container": "sqldbauditlogs"
