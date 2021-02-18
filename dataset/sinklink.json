@@ -1,5 +1,5 @@
 {
-	"name": "DelimitedText4",
+	"name": "sinklink",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureBlobStorage1",
