@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "CopyLocaldatatoAzuredb",
+				"name": "Multi_2_SingleFile",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -13,78 +13,36 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": [
-					{
-						"name": "Source",
-						"value": "dbo.customers"
-					},
-					{
-						"name": "Destination",
-						"value": "dbo.Contacts"
-					}
-				],
+				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "SqlServerSource",
-						"partitionOption": "None"
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": false,
+							"wildcardFileName": "*",
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
 					},
 					"sink": {
-						"type": "AzureSqlSink"
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSettings",
+							"copyBehavior": "MergeFiles"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
 					},
 					"enableStaging": false,
 					"validateDataConsistency": false,
 					"translator": {
 						"type": "TabularTranslator",
-						"mappings": [
-							{
-								"source": {
-									"name": "lastname",
-									"type": "String",
-									"physicalType": "varchar"
-								},
-								"sink": {
-									"name": "Fname",
-									"type": "String",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "firstname",
-									"type": "String",
-									"physicalType": "varchar"
-								},
-								"sink": {
-									"name": "Lname",
-									"type": "String",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "birthday",
-									"type": "Date",
-									"physicalType": "date"
-								},
-								"sink": {
-									"name": "Dob",
-									"type": "Date",
-									"physicalType": "date"
-								}
-							},
-							{
-								"source": {
-									"name": "Modifiedon",
-									"type": "DateTime",
-									"physicalType": "datetime"
-								},
-								"sink": {
-									"name": "LastModifiedon",
-									"type": "DateTime",
-									"physicalType": "datetime"
-								}
-							}
-						],
 						"typeConversion": true,
 						"typeConversionSettings": {
 							"allowDataTruncation": true,
@@ -94,14 +52,21 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "SourceDataset_l6z",
-						"type": "DatasetReference"
+						"referenceName": "sourcelink",
+						"type": "DatasetReference",
+						"parameters": {
+							"foldername": "loans/input/Loan"
+						}
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "DestinationDataset_l6z",
-						"type": "DatasetReference"
+						"referenceName": "sinklink",
+						"type": "DatasetReference",
+						"parameters": {
+							"filename": "Loan.csv",
+							"foldername": "loans/append"
+						}
 					}
 				]
 			}
