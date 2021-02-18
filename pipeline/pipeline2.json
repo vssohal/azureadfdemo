@@ -64,6 +64,11 @@
 							"typeProperties": {
 								"source": {
 									"type": "DelimitedTextSource",
+									"additionalColumns": [
+										{
+											"value": "$$FILEPATH"
+										}
+									],
 									"storeSettings": {
 										"type": "AzureBlobStorageReadSettings",
 										"recursive": false,
@@ -83,7 +88,7 @@
 									"formatSettings": {
 										"type": "DelimitedTextWriteSettings",
 										"quoteAllText": true,
-										"fileExtension": ".txt"
+										"fileExtension": ".csv"
 									}
 								},
 								"enableStaging": false,
@@ -114,12 +119,8 @@
 									"referenceName": "sinklink",
 									"type": "DatasetReference",
 									"parameters": {
-										"foldername": {
-											"value": "'loan/append'",
-											"type": "Expression"
-										},
-										"filename": {
-											"value": "@concat(item().name,'.csv')",
+										"outfilename": {
+											"value": "@item().name",
 											"type": "Expression"
 										}
 									}
