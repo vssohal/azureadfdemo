@@ -114,12 +114,12 @@
 									"referenceName": "sinklink",
 									"type": "DatasetReference",
 									"parameters": {
-										"filename": {
-											"value": "@concat(substring(item().name,0,sub(length(item().name),2)),'.csv')\n\n",
-											"type": "Expression"
-										},
 										"foldername": {
 											"value": "'loan/append'",
+											"type": "Expression"
+										},
+										"filename": {
+											"value": "@concat(item().name,'.csv')",
 											"type": "Expression"
 										}
 									}
