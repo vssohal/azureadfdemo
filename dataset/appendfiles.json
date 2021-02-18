@@ -5,20 +5,11 @@
 			"referenceName": "azstorage",
 			"type": "LinkedServiceReference"
 		},
-		"parameters": {
-			"AppFile": {
-				"type": "string"
-			}
-		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": {
-					"value": "@concat(dataset().AppFile,'.csv')",
-					"type": "Expression"
-				},
 				"folderPath": "loans/append",
 				"container": "sqldbauditlogs"
 			},
